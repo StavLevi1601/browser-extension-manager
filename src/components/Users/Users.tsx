@@ -18,7 +18,7 @@ export function Users () {
                 setUsers(data);
                 setIsLoading(false)
             } catch (error) {
-                // setError("faild to load");
+                setError("faild to load");
                 setIsLoading(false)
                 console.error("Error fetching users:", error);
             }
