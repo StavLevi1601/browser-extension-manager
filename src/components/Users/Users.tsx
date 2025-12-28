@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Stack} from "@mui/material";
 import type {User} from "../../types/User.type.ts";
 
-function Users () {
+export const Users = () =>{
 
     const [searchTerm, setSearchTerm] = useState("");
     const [users, setUsers] = useState<User[]>([]);
@@ -49,5 +49,3 @@ function Users () {
     </Stack>
 
 }
-
-export default Users
