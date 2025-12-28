@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# browser-extension-manager
-browser-extension-manager
-=======
 # Browser Extension Manager
 
 A modern React-based web application for managing browser extensions with an intuitive interface. Built with TypeScript, Material-UI, and Vite for optimal performance and developer experience.
