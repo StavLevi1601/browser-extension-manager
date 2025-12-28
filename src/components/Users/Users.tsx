@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {Stack} from "@mui/material";
 
-export function Users () {
+function Users () {
 
     const [users, setUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
@@ -18,7 +18,8 @@ export function Users () {
                 setUsers(data);
                 setIsLoading(false)
             } catch (error) {
-                setError("faild to load");
+                // @ts-ignore
+                setError(`faild to load`);
                 setIsLoading(false)
                 console.error("Error fetching users:", error);
             }
@@ -44,3 +45,5 @@ export function Users () {
     </Stack>
 
 }
+
+export default Users
