@@ -4,7 +4,6 @@ import {EXTENSIONS_DATA} from "../../data/extensionCardData.ts";
 import {ExtensionMainHeader} from "../../components/ExtensionHeader/ExtensionHeader.tsx";
 import {ExtensitonList} from "../../components/ExtensitonList/ExtensitonList.tsx";
 import {useState} from "react";
-import {Users} from "../../components/Users/Users.tsx";
 
 type HomeProps = {
     toggleMode: () => void;
