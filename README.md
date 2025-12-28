@@ -128,4 +128,3 @@ This project is private and not currently open source.
 ---
 
 Built with ❤️ using React, TypeScript, and Material-UI
->>>>>>> 9863ad4 (Initial commit)
