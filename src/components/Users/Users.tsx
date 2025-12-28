@@ -1,12 +1,14 @@
 import {useEffect, useState} from "react";
 import {Stack} from "@mui/material";
+import type {User} from "../../types/User.type.ts";
 
 function Users () {
 
-    const [users, setUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
-    const [error, setError] = useState(null);
+    const [users, setUsers] = useState<User[]>([]);
+    const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -18,8 +20,7 @@ function Users () {
                 setUsers(data);
                 setIsLoading(false)
             } catch (error) {
-                // @ts-ignore
-                setError(`faild to load`);
+                setError(error instanceof Error ? error.message : "An unknown error occurred");
                 setIsLoading(false)
                 console.error("Error fetching users:", error);
             }
@@ -39,7 +40,7 @@ function Users () {
         <input placeholder="Search users..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <ul>
             {users.map((user,index) => (
-                <li key={index}>{user}</li>
+                <li key={index}>{user.name}</li>
             ))}
         </ul>
     </Stack>
