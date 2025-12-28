@@ -12,6 +12,8 @@ function Users () {
 
     useEffect(() => {
         const fetchUsers = async () => {
+            setIsLoading(true);
+            setError(null);
             try {
                 setIsLoading(true)
                 const response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -19,6 +21,7 @@ function Users () {
                 console.log("Fetched users:", data);
                 setUsers(data);
                 setIsLoading(false)
+                setError(null);
             } catch (error) {
                 setError(error instanceof Error ? error.message : "An unknown error occurred");
                 setIsLoading(false)
