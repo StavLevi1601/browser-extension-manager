@@ -59,7 +59,7 @@ browser-extension-manager/
 - **Build Tool**: Vite / Webpack (TBD)
 
 ### Browser Integration
-- **Chrome**: Chrome Extensions API / WebExtensions API
+- **Chrome**: Chrome Extensions Manifest V3 API
 - **Firefox**: WebExtensions API
 - **Edge**: Edge Extensions API (Chromium-based)
 
@@ -106,7 +106,7 @@ Create a `.env` file in the root directory with the following variables:
 
 ```env
 # Database
-DATABASE_URL=sqlite://./data.db
+DATABASE_URL=sqlite:./data.db
 
 # API Keys (if needed)
 CHROME_STORE_API_KEY=your_key_here
@@ -196,7 +196,7 @@ Contributions are welcome! Please follow these steps:
 5. Ensure all tests pass
 6. Submit a pull request
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) (once created) for detailed guidelines.
+Please read our contributing guidelines for detailed information on how to contribute to this project.
 
 ## 📝 License
 
@@ -206,7 +206,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [GitHub Repository](https://github.com/StavLevi1601/browser-extension-manager)
 - [Issue Tracker](https://github.com/StavLevi1601/browser-extension-manager/issues)
-- [Documentation](https://github.com/StavLevi1601/browser-extension-manager/docs) (TBD)
 
 ## 📧 Contact
 
